@@ -2,9 +2,9 @@ import express from "express";
 import dotenv from "dotenv"
 import mongoose from "mongoose"
 import authRoute from "./routes/auth.js";
-import hotelsRoute from "./routes/hotels";
-import roomsRoute from "./routes/rooms";
-import userRoute from "./routes/users";
+import hotelsRoute from "./routes/hotels.js";
+import roomsRoute from "./routes/rooms.js";
+import userRoute from "./routes/users.js";
 
 const app = express();
 dotenv.config();
@@ -30,7 +30,7 @@ app.use("/api/users", userRoute)
 
 
 
-app.listen(7777, () => {
+app.listen(1002, () => {
     connect();
     console.log("Connected to Backend")
 })
